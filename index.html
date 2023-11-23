@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EniolaTalabi</title>
+    <link rel="stylesheet" href="Style/index.css" />
+    <!-- <link rel="shortcut icon" href="./Assets/favicon.ico" type="image/x-icon" /> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Top Left Bouncer -->
+    <div class="bouncer"></div>
+    <!-- Top Left Bouncer -->
+    <!-- Header Begins -->
+    <header class="header" id="header">
+      <div class="brand-nav">
+        <div class="brand">
+          <h2 id="brandName" class="h2-brandname">EniolaTalabi</h2>
+        </div>
+
+        <button class="modeToggle" onclick="modeToggle()">
+          <i class="fa-regular fa-sun fa-2x" id="sun-icon"></i>
+
+          <i class="fa-solid fa-moon fa-2x" id="moon-icon"></i>
+        </button>
+
+        <span class="menu-icon" id="menu">
+          <i class="material-icons">dehaze</i>
+        </span>
+
+        <nav>
+          <ul id="ul">
+            <li class="li"><a class="page-nav" href="#header">Home </a></li>
+            <li class="li">
+              <a class="page-nav" href="#about-section" id="about">About</a>
+            </li>
+            <li class="li">
+              <a class="page-nav" href="#projects">Projects</a>
+            </li>
+            <li class="li">
+              <a class="page-nav" href="#contacts">Contacts</a>
+            </li>
+            <span class="close-nav" onclick="return closeModal()">
+              &times;</span
+            >
+          </ul>
+        </nav>
+      </div>
+      <div class="hero">
+        <div class="hero-text">
+          <!-- <p class="title" id="title">WEB DEVELOPER</p> -->
+          <h1 class="intro">
+            Hello, I am
+            <br />
+            <span class="autotype"></span>
+          </h1>
+
+          <p class="description">
+            I create experiences that are aesthetically pleasing for people,
+            while prioritizing the accessibility and performance of such
+            software interfaces on, and for the web.
+          </p>
+          <div class="links">
+            <a href="#projects" onclick="showProjectSection()" class="btn btn1"
+              >Projects</a
+            >
+            <a
+              href="http://www.linkedin.com/in/eniola-solomon-talabi-723648271"
+              target="_blank"
+              class="btn"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./Assets/eniola-removebg-preview.png" alt="my-picture" />
+        </div>
+      </div>
+      <!-- <div class="seeMore">
+            <a href="#about-section" class="btn btn1">See More...</a>
+        </div> -->
+      <div class="scroll-button">
+        <a href="#about-section" class="scroll">
+          <div class="icon-scroll">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+            <div class="icon-arrows">
+              <span></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- About Me Section -->
+    <section class="about-section" id="about-section">
+      <div class="aboutHeroPic" id="about-modal">
+        <div class="about-txt">
+          <h2>About me</h2>
+          <!-- <p>I'm a professional web developer with years of experience. I'm focused and passionate about building
+                    user interface with the aim of giving users the best experience they can have while surfing the
+                    internet.
+                    I focus on using html,css and javascript to build interactive and responsive user interfaces across
+                    all platforms.
+                    I also have experience in PHP for server-side scripting while i am currently learning React.js and
+                    Bootstrap Css.
+                </p> -->
+          <p>
+            As a Banking and Finance graduate with over a year experience in
+            software development, I specialize in creating web applications
+            using JavaScript, React JS, SCSS, HTML, and CSS. My backend
+            expertise includes NodeJS and MongoDB, along with a strong
+            understanding of database management and interface design. Committed
+            to teamwork, I consistently meet deadlines and contribute
+            effectively to project goals. I am eager to join a dynamic team as
+            an entry-level software developer, aiming to apply my programming
+            skills to maintain an efficient, reusable codebase and develop
+            reliable software solutions for businesses.
+          </p>
+
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1Z0D6e4hib5AnabW8yMjsXfaxjABcE4_M/view?usp=sharing"
+            class="btn btn1"
+            >View my Resume</a
+          >
+          <!-- <a href="#" id="close" onclick="aboutClose()" class="btn btn1">&times</a> -->
+        </div>
+        <!-- <div class="about-image">
+                <img src="Assets/sammydepoj.png" alt="" />
+            </div> -->
+      </div>
+    </section>
+
+    <!-- Projects Section Begins-->
+
+    <section class="proj-section" id="project-section">
+      <!-- <a href="#" id="close" onclick="projectSectionClose()" class="btn btn1"> &times </a> -->
+
+      <div class="projects" id="projects">
+        <h2>Projects</h2>
+      </div>
+      <p class="notice">
+        Kindly be aware that some of these projects are in their various level
+        of development, therefore, you may not be able to use all the features
+        of some of them.
+      </p>
+      <div class="project-card fade-right">
+        <div class="proj-details">
+          <h3>Expense Tracker</h3>
+          <p>
+            Express Tracker is an online platform that enables users to
+            effectively monitor and manage their personal expenses. It offers a
+            user-friendly interface for tracking spending in various categories,
+            such as rent, utilities, and groceries. Key features include budget
+            setting, expense categorization, and visual analytics to help users
+            understand their spending patterns
+          </p>
+
+          <i class="fa-solid fa-link fa-1x">
+            <a target="_blank" href="https://nimble-druid-585940.netlify.app/"
+              >View Project</a
+            >
+          </i>
+
+          <i class="fa-brands fa-github fa-1x">
+            <a
+              target="_blank"
+              href="https://github.com/eniolatalabi/EXPENSE-TRACKER-HTML-CSS-JAVASCRIPT.git"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/expensetrackerjpg.jpg" alt="project image" />
+        </div>
+      </div>
+      <div class="project-card fade-left">
+        <div class="proj-details">
+          <h3>Savvy Music Player</h3>
+          <p>
+            Savvy Music Player is an intuitive and user-friendly online platform
+            designed for music enthusiasts. It allows users to easily access,
+            organize, and enjoy their favorite music. With features like
+            personalized playlists, Adding Music directly from files, Savvy
+            Music Player offers an enhanced listening experience.
+          </p>
+
+          <i class="fa-solid fa-link fa-1x">
+            <a
+              target="_blank"
+              href="https://melodious-unicorn-f4ed07.netlify.app/"
+              >View Project</a
+            >
+          </i>
+
+          <i class="fa-brands fa-github fa-1x">
+            <a
+              target="_blank"
+              href="https://github.com/eniolatalabi/SavvyMusicPlayer.git"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/music.jpg" alt="project image" />
+        </div>
+      </div>
+
+      <div class="project-card fade-right">
+        <div class="proj-details">
+          <h3>Kiddies Hive</h3>
+          <p>
+            KidsHive is an engaging and educational online platform tailored for
+            children aged 7 and above. It specializes in teaching HTML and CSS
+            through a series of interactive and fun streaming videos.
+          </p>
+
+          <i class="fa-solid fa-link">
+            <a target="_blank" href="https://sailkidshive.vercel.app/"
+              >View Project</a
+            >
+          </i>
+          <i class="fa-brands fa-github fa-1x">
+            <a
+              target="_blank"
+              href="https://github.com/SailGroup6/Kids-App-Frontend.git"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/kiddies.jpg" alt="project image" />
+        </div>
+      </div>
+
+      <div class="project-card fade-left">
+        <div class="proj-details">
+          <h3>Analog Clock</h3>
+          <p>
+            This Analog Clock is a perfect blend of aesthetics and
+            functionality, crafted using CSS for its stunning interface and
+            JavaScript for its operational features. The clock showcases a
+            classic design with a modern twist, offering a visually appealing
+            way to keep track of time
+          </p>
+          <i class="fa-solid fa-link">
+            <a target="_blank" href="https://rococo-monstera-ad4e40.netlify.app/"
+              >View Project</a
+            >
+          </i>
+          <i class="fa-brands fa-github fa-1x">
+            <a target="_blank" href="https://github.com/eniolatalabi/Analog-CLock.git"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/analog.jpg" alt="project image" />
+        </div>
+      </div>
+<!-- 
+      <div class="project-card fade-right">
+        <div class="proj-details">
+          <h3>My Dico</h3>
+          <p>A mini dictionary that's uses Free dictionary API.</p>
+          <i class="fa-solid fa-link">
+            <a
+              target="_blank"
+              href="https://sammydepoj.github.io/api-dictionary/"
+              >View Project</a
+            >
+          </i>
+          <i class="fa-brands fa-github fa-1x">
+            <a
+              target="_blank"
+              href="https://github.com/Sammydepoj/api-dictionary"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/Mydico.jpeg" alt="project image" />
+        </div>
+      </div>
+
+      <div class="project-card fade-left">
+        <div class="proj-details">
+          <h3>QrGen</h3>
+          <p>
+            QrGen allows users to upload their links, files or any other digital
+            assets and get a qr code that can be shared to people to access the
+            digital asset
+          </p>
+          <i class="fa-solid fa-link">
+            <a
+              target="_blank"
+              href="http://qrgen.cockroach.infratradetechnology.com/"
+              >View Project</a
+            >
+          </i>
+          <i class="fa-brands fa-github fa-1x">
+            <a
+              target="_blank"
+              href="https://github.com/zuri-training/Cockroach_qr_generator"
+              >View Code</a
+            >
+          </i>
+        </div>
+        <div class="proj-image">
+          <img src="Assets/qrgen.png" alt="project image" />
+        </div>
+      </div> -->
+      <!-- <a href="#" id="close" onclick="projectSectionClose()" class="btn btn1"> &times </a> -->
+    </section>
+
+    <section class="getInTouch" id="getInTouch">
+      <a href="#" id="close" onclick="contactSectionClose()" class="btn btn1">
+        &times
+      </a>
+      -->
+
+      <div class="message" id="contacts">
+        <h2>Get in touch with me</h2>
+      </div>
+
+      <div class="message-form">
+        <form
+          action="mailto:eniola.talabi@aol.com"
+          method="get"
+          enctype="text/plain"
+        >
+          <div>
+            <label>Name</label>
+            <br />
+            <input type="text" name="name" id="" arial-label="" />
+          </div>
+          <div>
+            <label>E-mail</label>
+            <br />
+            <input type="email" name="email" id="" arial-label="" />
+          </div>
+          <div>
+            <label>Message</label>
+            <br />
+            <textarea cols="20" rows="15" name="message"></textarea>
+          </div>
+
+          <button type="submit" name="send" class="message-send btn">
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="social-brand">
+        <p>Connect with me on my socials</p>
+        <div class="socials">
+          <a
+            href="https://www.twitter.com/sammydepoj "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-twitter fa-2x social-icons"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/sammydepoj "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-square-instagram fa-2x social-icons"></i>
+          </a>
+          <a
+            href="https://www.github.com/ "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github fa-2x social-icons"></i>
+          </a>
+
+          <a
+            href="http://www.linkedin.com/in/eniola-solomon-talabi-723648271"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-brands fa-linkedin fa-2x social-icons"></i
+          ></a>
+          <a href="mailto:samueladepoju86@yahoo.com"
+            ><i class="fa-sharp fa-solid fa-envelope fa-2x social-icons"></i>
+          </a>
+        </div>
+        <div class="brand">
+          <h2 class="h2-brandname" id="copyright"></h2>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
+      integrity="sha512-gsEItzcNkWxfxHjr4BaEZAd9YuRWYjxnj7c/yukcZ0/nWehUb5TjJNyyv1ApCU2DFH/qgw+stFZHPOKnoQnIuQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./Scripts/index.js"></script>
+  </body>
+</html>
