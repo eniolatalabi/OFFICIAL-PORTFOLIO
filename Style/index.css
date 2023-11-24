@@ -661,9 +661,10 @@ li a:hover {
 }
 .proj-image img {
   width: 100%;
+  height: 100%;
 }
 .proj-image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 .getInTouch {
   /* display: none;
